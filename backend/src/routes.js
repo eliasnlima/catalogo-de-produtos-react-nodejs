@@ -8,5 +8,6 @@ routes.get('/', (req, res) => {
 })
 
 routes.post('/produtos/add', productController.addProduct)
+routes.get('/produtos', productController.showProduct)
 
 export default routes;

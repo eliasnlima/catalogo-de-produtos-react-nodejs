@@ -20,6 +20,13 @@ class productController{
         res.json({message: "Produto cadastrado!"})
         
     }
+
+    showProduct(req,res) {
+
+        return res.json({produtos})
+
+
+    }
 }
 
 export default new productController()
