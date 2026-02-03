@@ -1,5 +1,6 @@
 # Dependências
 node_modules/
+node_modules/glob-parent/README.md
 
 # Builds
 dist/
@@ -31,3 +32,4 @@ Thumbs.db
 # Cache
 .cache/
 .parcel-cache/
+
