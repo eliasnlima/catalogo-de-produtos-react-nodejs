@@ -22,7 +22,7 @@ const ProductForm = () => {
             body: JSON.stringify((produto))
         }       
         )
-
+  
         setNome("")
         setPreco("")
     }
