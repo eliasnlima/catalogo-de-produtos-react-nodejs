@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import ProductForm from "./components/ProductForm"
 import ProductList from "./components/ProductList"
+import "./App.css"
 
 function App() {
 
@@ -26,10 +27,10 @@ function App() {
   
 
   return (
-    <>
+    <div className="app-container">
     <ProductForm onProduto={produtoCriado}/>
     <ProductList lista={produtos}/>
-    </>
+    </div>
   )
 
 }

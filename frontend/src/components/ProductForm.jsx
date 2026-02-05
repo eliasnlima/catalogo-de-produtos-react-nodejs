@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import './ProductForm.css'
 
 const ProductForm = ({onProduto}) => {
 
@@ -30,14 +31,16 @@ const ProductForm = ({onProduto}) => {
     }
 
     return (
-        <div className="container">
-            <h1>Cadastro de Produto</h1>
-            <form onSubmit={cadastrar}>
-                <input type="text" placeholder="Insira o nome do produto" value={nome} onChange={(e) => setNome(e.target.value)}/><br/>
-                <input type="number" placeholder="Insira o valor do produto" value={preco} onChange={(e) => setPreco(e.target.value)}/><br/>
-                <input type="submit" value="Cadastrar"/>
-            </form>
-        </div>
+       
+            <div className="form">
+                <h1>Cadastro de Produto</h1>
+                <form onSubmit={cadastrar}>
+                    <input type="text" placeholder="Insira o nome do produto" value={nome} onChange={(e) => setNome(e.target.value)}/><br/>
+                    <input type="number" placeholder="Insira o valor do produto" value={preco} onChange={(e) => setPreco(e.target.value)}/><br/>
+                    <input type="submit" value="Cadastrar"/>
+                </form>
+            </div>
+       
     )
 }
 
