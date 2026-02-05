@@ -1,26 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 
-const ProductList = () => {
-
-    const [ lista, setLista ] = useState([])
-    
-     useEffect(() => {
-        att_lista()
-    }, [])
-
-
-    const att_lista = async () => {
-        const res = await fetch('http://localhost:5050/produtos', {
-        method: 'GET',
-    })
-
-    const data = await res.json()
-
-    setLista(data.produtos)
-
-
-    }
+const ProductList = ({lista}) => {
 
     return (
         <div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const ProductForm = () => {
+const ProductForm = ({onProduto}) => {
 
     const [nome, setNome] = useState()
     const [preco, setPreco] = useState()
@@ -25,6 +25,8 @@ const ProductForm = () => {
   
         setNome("")
         setPreco("")
+
+        onProduto()
     }
 
     return (
