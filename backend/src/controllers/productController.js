@@ -27,6 +27,20 @@ class productController{
 
 
     }
+
+    deleteProduct(req,res) {
+        
+        const { id } = req.params
+        const idNumber = Number(id)
+
+        const index = produtos.findIndex(p => p.id === idNumber)
+
+        produtos.splice(index, 1)
+
+        return res.json({produtos})
+
+
+    }
 }
 
 export default new productController()

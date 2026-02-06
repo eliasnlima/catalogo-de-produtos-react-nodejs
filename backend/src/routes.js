@@ -9,5 +9,6 @@ routes.get('/', (req, res) => {
 
 routes.post('/produtos/add', productController.addProduct)
 routes.get('/produtos', productController.showProduct)
+routes.delete('/produto/delete/:id', productController.deleteProduct)
 
 export default routes;
