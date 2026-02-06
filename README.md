@@ -2,9 +2,7 @@
 
 Sistema para gerenciamento de produtos, permitindo cadastro, visualização e exclusão de itens através de uma interface React integrada a uma API Node.js.
 
-![alt text](/assets/image.png)
-
-![alt text](/assets/image_2.png)
+<img src="/assets/image.png" alt="alt text" style="width: 60%;"> 
 
 ---
 ## 🚀 Tecnologias
@@ -53,7 +51,7 @@ A comunicação entre o frontend e o backend é feita através dos seguintes end
 │   │   ├── App.jsx / .css            # Componente principal
 │   │   └── main.jsx                  # Ponto de entrada
 │   └── index.html
-
+````
 ---
 ## 👨‍💻 Autor
 
