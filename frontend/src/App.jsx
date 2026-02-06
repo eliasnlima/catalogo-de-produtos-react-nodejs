@@ -39,13 +39,22 @@ function App() {
     const produtoCriado = () => {
       att_lista()
     }
+
+    const excluirProduto = async (id) => {
+      const res = await fetch(`http://localhost:5050/produto/delete/${id}`, {
+        method: 'DELETE'
+      })
+
+      fecharModal()
+      att_lista()
+    }
   
 
   return (
     <div className="app-container">
     <ProductForm onProduto={produtoCriado}/>
     <ProductList lista={produtos} produto={selecionaProduto}/>
-    <ProductPopup aberto={modalAberto} produto={produtoSelecionado} onClose={fecharModal}/>
+    <ProductPopup aberto={modalAberto} produto={produtoSelecionado} onClose={fecharModal} onExcluir={() => excluirProduto(produtoSelecionado.id)}/>
     </div>
   )
 

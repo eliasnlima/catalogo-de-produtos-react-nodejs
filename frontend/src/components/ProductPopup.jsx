@@ -1,7 +1,7 @@
 import React from "react";
 import './ProductPopup.css'
 
-const ProductPopup = ({aberto, produto, onClose}) => {
+const ProductPopup = ({aberto, produto, onClose, onExcluir}) => {
     if (!aberto || !produto) return null
 
     return (
@@ -9,7 +9,7 @@ const ProductPopup = ({aberto, produto, onClose}) => {
       <div className="popup-card" onClick={(e) => e.stopPropagation()}>
         <h3>{produto.nome}</h3>
         <p>Preço: R$ {produto.preco}</p>
-        <button onClick={onClose}>Excluir</button>
+        <button onClick={onExcluir}>Excluir</button>
       </div>
     </div>
     )

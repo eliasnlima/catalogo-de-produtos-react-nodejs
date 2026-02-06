@@ -35,6 +35,10 @@ class productController{
 
         const index = produtos.findIndex(p => p.id === idNumber)
 
+        if (index === -1) {
+            return res.status(404).json({ error: "Produto não encontrado" })
+        }
+
         produtos.splice(index, 1)
 
         return res.json({produtos})
