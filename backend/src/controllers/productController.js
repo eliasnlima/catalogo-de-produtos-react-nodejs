@@ -1,4 +1,4 @@
-import produtos from '../data/products.js'
+const produtos = require('../data/products')
 
 var id = 0;
 
@@ -9,6 +9,9 @@ class productController{
         id = id + 1
         const { nome, preco } = req.body
 
+        if (typeof preco !== "number"){
+            res.status(400).json({message: "Preço deve ser um número!"})
+        }
         const produto = {
             "id": id,
             "nome": nome,
@@ -45,4 +48,4 @@ class productController{
     }
 }
 
-export default new productController()
+module.exports = new productController()

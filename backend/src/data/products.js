@@ -1,2 +1,2 @@
 let produtos = []
-export default produtos
+module.exports = produtos
