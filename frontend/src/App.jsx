@@ -34,7 +34,8 @@ function App() {
 
     const data = await res.json()
 
-    setProdutos(data.produtos)}
+    setProdutos(data.produtos)
+  }
 
     const produtoCriado = () => {
       att_lista()

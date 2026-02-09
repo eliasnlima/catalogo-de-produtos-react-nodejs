@@ -22,10 +22,8 @@ class productController{
     }
 
     showProduct(req,res) {
-
+        
         return res.json({produtos})
-
-
     }
 
     deleteProduct(req,res) {
