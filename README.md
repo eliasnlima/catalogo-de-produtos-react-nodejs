@@ -17,6 +17,9 @@ Sistema para gerenciamento de produtos, permitindo cadastro, visualização e ex
 * **CORS** para integração entre domínios.
 * **Arquitetura modular** (Controllers e Routes).
 
+### Testes (Em Desenvolvimento): 
+* Implementação de testes unitários com **Jest** para garantir a confiabilidade das funções e prevenir bugs no fluxo da aplicação.
+
 ---
 ## 🔗 Endpoints da API
 
@@ -52,6 +55,12 @@ A comunicação entre o frontend e o backend é feita através dos seguintes end
 │   │   └── main.jsx                  # Ponto de entrada
 │   └── index.html
 ````
+---
+##🔮 Próximos Passos
+**Persistência de Dados: Implementação de uma camada de banco de dados SQL para substituir o armazenamento em memória e garantir que os dados sejam preservados.
+
+**Refinamento de Testes: Expansão da cobertura de testes com Jest para incluir componentes do frontend.
+
 ---
 ## 👨‍💻 Autor
 
