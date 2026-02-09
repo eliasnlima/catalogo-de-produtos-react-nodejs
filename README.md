@@ -56,10 +56,11 @@ A comunicação entre o frontend e o backend é feita através dos seguintes end
 │   └── index.html
 ````
 ---
-##🔮 Próximos Passos
-**Persistência de Dados: Implementação de uma camada de banco de dados SQL para substituir o armazenamento em memória e garantir que os dados sejam preservados.
+## Próximos Passos
 
-**Refinamento de Testes: Expansão da cobertura de testes com Jest para incluir componentes do frontend.
+* **Persistência de Dados: Implementação de uma camada de banco de dados SQL para substituir o armazenamento em memória e garantir que os dados sejam preservados.**
+
+* **Refinamento de Testes: Expansão da cobertura de testes com Jest para incluir componentes do frontend.**
 
 ---
 ## 👨‍💻 Autor
