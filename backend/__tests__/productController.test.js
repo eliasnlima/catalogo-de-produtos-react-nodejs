@@ -102,3 +102,82 @@ describe('productController - showProduct', () => {
         expect(res.json).toHaveBeenCalledWith({message: "Ainda não existem produtos cadastrados!"})
     })
 })
+
+describe('productController - deleteProduct', () => {
+
+    beforeEach(() => {
+
+        produtos.push(
+            {
+                id: 1,
+                nome: "Computador",
+                preco: 1200
+            },
+            {
+                id: 2,
+                nome: "Teclado",
+                preco: 80
+            },
+            {
+                id: 3,
+                nome: "Mouse",
+                preco: 150
+            }
+        )
+        
+    })
+
+    test('Deve excluir o item com o id indicado', () => {
+
+        const id = 1
+        
+        const req = {
+            params: {
+                id: String(id)
+            }
+        }   
+
+        const res = {
+            status: jest.fn().mockReturnThis(),
+            json: jest.fn()
+        }
+
+        productController.deleteProduct(req,res)
+
+        expect(produtos).toEqual([
+            {
+                id: 2,
+                nome: "Teclado",
+                preco: 80
+            },
+            {
+                id: 3,
+                nome: "Mouse",
+                preco: 150
+            },
+        ])
+        expect(res.json).toHaveBeenCalledWith({produtos})
+    })
+
+    test('Se não exitir nenhum produto com o ID indicado, deve retornar erro', () => {
+        
+        const id = 99
+
+        const req = {
+            params: {
+                id: String(id)
+            }
+        }
+
+        const res = {
+            status: jest.fn().mockReturnThis(),
+            json: jest.fn()
+        }
+
+        productController.deleteProduct(req,res)
+
+        expect(res.status).toHaveBeenCalledWith(404)
+        expect(res.json).toHaveBeenCalledWith({error: "Produto não encontrado"})
+    })
+
+})
