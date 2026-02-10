@@ -75,3 +75,30 @@ describe('product Controller - addProduct', () => {
 
     })
 }) 
+
+describe('productController - showProduct', () => {
+    test('Deve mostrar todos os produtos', () => {
+
+        const res = {
+            json: jest.fn()
+        }   
+
+        productController.showProduct(res)
+
+        expect(res.json).toHaveBeenCalledWith({produtos})
+
+    })
+
+    test('Se não tiver produto cadastrado, deve retonar mensagem', () => {
+        
+        produtos.length = 0
+
+        const res = {
+            json: jest.fn()
+        }
+
+        productController.showProduct(res)
+
+        expect(res.json).toHaveBeenCalledWith({message: "Ainda não existem produtos cadastrados!"})
+    })
+})

@@ -10,7 +10,7 @@ class productController{
         const { nome, preco } = req.body
 
         if (typeof preco !== "number"){
-            res.status(400).json({message: "Preço deve ser um número!"})
+            return res.status(400).json({message: "Preço deve ser um número!"})
         }
         const produto = {
             "id": id,
@@ -24,8 +24,10 @@ class productController{
         
     }
 
-    showProduct(req,res) {
-        
+    showProduct(res) {
+        if(produtos.length < 1){
+            return res.json({message: "Ainda não existem produtos cadastrados!"})
+        }
         return res.json({produtos})
     }
 
