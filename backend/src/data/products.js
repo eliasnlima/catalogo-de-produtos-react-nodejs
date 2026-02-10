@@ -1,2 +1,2 @@
 let produtos = []
-module.exports = produtos
+module.exports = {produtos}

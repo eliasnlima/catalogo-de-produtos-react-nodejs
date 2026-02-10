@@ -1,6 +1,6 @@
-const produtos = require('../data/products')
+const {produtos} = require('../data/products')
 
-var id = 0;
+let id = 0;
 
 class productController{
 
@@ -48,4 +48,12 @@ class productController{
     }
 }
 
-module.exports = new productController()
+
+function resetId() {
+    id = 0
+}
+
+module.exports = {
+    productController: new productController(),
+    resetId
+}
