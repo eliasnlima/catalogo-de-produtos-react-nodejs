@@ -4,8 +4,8 @@ import './ProductForm.css'
 
 const ProductForm = ({onProduto}) => {
 
-    const [nome, setNome] = useState()
-    const [preco, setPreco] = useState()
+    const [nome, setNome] = useState("")
+    const [preco, setPreco] = useState("")
 
     const cadastrar = async (e) => {
         e.preventDefault()
